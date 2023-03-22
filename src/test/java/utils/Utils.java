@@ -20,6 +20,9 @@ public class Utils {
          driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
          driver.get("https://www.saucedemo.com/");
+     }
 
+     public static void finalizarAcesso() {
+         driver.quit();
      }
 }
