@@ -11,11 +11,11 @@ public class Utils {
     public static WebDriver driver;
      public static void acessarSistema() {
          //Uso caso dê problema para acessar o navegador, passar o options como parametro no new ChromeDriver()
-         //ChromeOptions options = new ChromeOptions();
-         //options.addArguments("--remote-allow-origins=*");
+         ChromeOptions options = new ChromeOptions();
+         options.addArguments("--remote-allow-origins=*");
 
          System.setProperty("webdriver.chrome.driver", "C:\\Webdrivers\\chromedrive\\111\\chromedriver.exe");
-         driver = new ChromeDriver();
+         driver = new ChromeDriver(options);
          driver.manage().window().maximize();
          driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 

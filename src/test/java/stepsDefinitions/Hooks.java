@@ -12,8 +12,8 @@ public class Hooks {
 
     }
 
-    @After
-    public void tearDown() {
-        Utils.finalizarAcesso();
-    }
+   // @After
+   // public void tearDown() {
+   //     Utils.finalizarAcesso();
+   // }
 }
