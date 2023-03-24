@@ -14,3 +14,14 @@
     E informo password "secret_sauce"
     E clico no botao de login
     Entao o sistema exibe usuario logado
+ @login
+  Esquema do Cenario: Campos obrigatorios
+    Quando informo username "<name>"
+    E informo password "<password>"
+    E clico no botao de login
+    Entao o sistema exibe a mensagem de campo obrigatorio
+    Exemplos:
+      | name | password |
+      |      | secret_sauce |
+      | standard_user |     |
+      |               |     |
