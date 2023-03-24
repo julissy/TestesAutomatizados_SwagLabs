@@ -2,12 +2,17 @@
   #enconding: UTF-8
 
   Funcionalidade: Login
-
-  Cenario: Usuario inválido
-    Quando informo username "ad"
-    E informo password "asd"
+    @login
+  Esquema do Cenario: Usuario inválido
+    Quando informo username "<name>"
+    E informo password "<password>"
     E clico no botao de login
     Entao o sistema exibe a mensagem usuario invalido
+    Exemplos:
+      | name | password |
+      | ad     | secret_sauce |
+      | standard_user | ads   |
+      |  ad             | ads    |
 
   Cenario: Realizar Login
     Quando informo username "standard_user"
@@ -15,7 +20,7 @@
     E clico no botao de login
     Entao o sistema exibe usuario logado
 
-    @login
+
   Esquema do Cenario: Campos obrigatorios
     Quando informo username "<name>"
     E informo password "<password>"
