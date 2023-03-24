@@ -14,7 +14,8 @@
     E informo password "secret_sauce"
     E clico no botao de login
     Entao o sistema exibe usuario logado
- @login
+
+    @login
   Esquema do Cenario: Campos obrigatorios
     Quando informo username "<name>"
     E informo password "<password>"
@@ -25,3 +26,12 @@
       |      | secret_sauce |
       | standard_user |     |
       |               |     |
+
+  Cenario: Realizar Logout
+    Quando informo username "standard_user"
+    E informo password "secret_sauce"
+    E clico no botao de login
+    E o sistema exibe usuario logado
+    E clico no menu
+    E clico em logout
+    Entao retorno para a pagina inicial

@@ -4,6 +4,7 @@ import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import pageObjects.HomePage;
 import pageObjects.LoginPage;
 
 import utils.Utils;
@@ -17,6 +18,7 @@ public class LoginSteps {
     private String mensagemError = "Epic sadface: Username and password do not match any user in this service";
     private String mensagemCampoObrigatorio = "Epic sadface:";
     LoginPage loginPage = new LoginPage();
+    HomePage homePage = new HomePage();
     @Quando("informo username {string}")
     public void informoUsername(String string) {
         loginPage.preencherUsername(string);
@@ -40,13 +42,11 @@ public class LoginSteps {
     @Quando("informo password secret_sauce")
     public void informoPasswordSecretSauce(String string) {
         loginPage.preencherPassword(string);
-
     }
     @Entao("o sistema exibe a mensagem de campo obrigatorio")
     public void oSistemaExibeAMensagemDeCampoObrigatorio() {
         assertTrue(mensagemCampoObrigatorio, driver.findElement(By.tagName("h3")).getText().contains("Epic sadface:"));
     }
-
     @Quando("informo username standard_user")
     public void informoUsernameStandardUser(String string) {
         loginPage.preencherUsername(string);
@@ -55,5 +55,16 @@ public class LoginSteps {
     public void informoPassword() {
         loginPage.preencherPassword("");
     }
-
+    @Quando("clico no menu")
+    public void clicoNoMenu() {
+        homePage.clicarMenu();
+    }
+    @Quando("clico em logout")
+    public void clicoEmLogout() {
+        homePage.clicarLogout();
+    }
+    @Entao("retorno para a pagina inicial")
+    public void retornoParaAPaginaInicial() {
+        assertEquals("Swag Labs", driver.findElement(By.className("login_logo")).getText());
+    }
 }
