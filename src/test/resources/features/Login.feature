@@ -2,7 +2,7 @@
   #enconding: UTF-8
 
   Funcionalidade: Login
-    @login
+
   Esquema do Cenario: Usuario inválido
     Quando informo username "<name>"
     E informo password "<password>"
@@ -13,7 +13,7 @@
       | ad     | secret_sauce |
       | standard_user | ads   |
       |  ad             | ads    |
-
+@login
   Cenario: Realizar Login
     Quando informo username "standard_user"
     E informo password "secret_sauce"

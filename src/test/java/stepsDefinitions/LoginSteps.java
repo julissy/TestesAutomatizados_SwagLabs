@@ -11,31 +11,32 @@ import utils.Utils;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static utils.Utils.Na;
 import static utils.Utils.driver;
 
 public class LoginSteps {
 
     private String mensagemError = "Epic sadface: Username and password do not match any user in this service";
     private String mensagemCampoObrigatorio = "Epic sadface:";
-    LoginPage loginPage = new LoginPage();
-    HomePage homePage = new HomePage();
+
+    private HomePage homePage = new HomePage();
 
 
     @Quando("informo username {string}")
     public void informoUsername(String string) {
-        loginPage.preencherUsername(string);
+        Na(LoginPage.class).preencherUsername(string);
     }
 
 
     @Quando("informo password {string}")
     public void informoPassword(String string) {
-        loginPage.preencherPassword(string);
+        Na(LoginPage.class).preencherPassword(string);
     }
 
 
     @Quando("clico no botao de login")
     public void clicarNoBotaoDeLogin() {
-        loginPage.clicarBotaoLogin();
+        Na(LoginPage.class).clicarBotaoLogin();
     }
 
 
@@ -53,7 +54,7 @@ public class LoginSteps {
 
     @Quando("informo password secret_sauce")
     public void informoPasswordSecretSauce(String string) {
-        loginPage.preencherPassword(string);
+        Na(LoginPage.class).preencherPassword(string);
     }
 
 
@@ -65,25 +66,25 @@ public class LoginSteps {
 
     @Quando("informo username standard_user")
     public void informoUsernameStandardUser(String string) {
-        loginPage.preencherUsername(string);
+        Na(LoginPage.class).preencherUsername(string);
     }
 
 
     @Quando("informo password ")
     public void informoPassword() {
-        loginPage.preencherPassword("");
+        Na(LoginPage.class).preencherPassword("");
     }
 
 
     @Quando("clico no menu")
     public void clicoNoMenu() {
-        homePage.clicarMenu();
+        Na(HomePage.class).clicarMenu();
     }
 
 
     @Quando("clico em logout")
     public void clicoEmLogout() {
-        homePage.clicarLogout();
+        Na(HomePage.class).clicarLogout();
     }
 
 

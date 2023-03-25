@@ -1,15 +1,24 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
 import static utils.Utils.driver;
 
 public class HomePage {
 
+    @FindBy(id = "react-burger-menu-btn")
+    private WebElement botaoMenu;
+
+    @FindBy(id = "react-burger-menu-btn")
+    private WebElement botaoLogout;
+
     public void clicarMenu() {
-        driver.findElement(By.id("react-burger-menu-btn")).click();
+        botaoMenu.click();
     }
 
     public void clicarLogout() {
-        driver.findElement(By.id("logout_sidebar_link")).click();
+        botaoLogout.click();
     }
 }

@@ -1,20 +1,37 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
 import static utils.Utils.driver;
 
 public class LoginPage {
 
+    @FindBy(name = "user-name" )
+    private WebElement campoUsuario;
+
+    @FindBy(name = "password" )
+    private WebElement campoPassword;
+
+    @FindBy(name = "login-button" )
+    private WebElement botaoLogin;
+
     public void preencherUsername(String usuario) {
-        driver.findElement(By.name("user-name")).sendKeys(usuario);
+        campoUsuario.sendKeys(usuario);
     }
 
     public void preencherPassword(String password) {
-        driver.findElement(By.name("password")).sendKeys(password);
+        campoPassword.sendKeys(password);
     }
 
     public void clicarBotaoLogin() {
-        driver.findElement(By.id("login-button")).click();
+        botaoLogin.click();
+    }
 
+    public void fazerLogin(String usuario, String password) {
+        preencherUsername(usuario);
+        preencherPassword(password);
+        clicarBotaoLogin();
     }
 }
