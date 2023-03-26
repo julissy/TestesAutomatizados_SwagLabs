@@ -9,6 +9,8 @@ import pageObjects.LoginPage;
 
 import utils.Utils;
 
+import java.util.concurrent.TimeUnit;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static utils.Utils.Na;
@@ -76,9 +78,16 @@ public class LoginSteps {
     }
 
 
+    @Quando("realizo login {string},{string}")
+    public void realizoLogin(String string, String string2) {
+        Na(LoginPage.class).fazerLogin(string,string2);
+    }
+
+
     @Quando("clico no menu")
     public void clicoNoMenu() {
         Na(HomePage.class).clicarMenu();
+
     }
 
 

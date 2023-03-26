@@ -13,11 +13,9 @@
       | ad     | secret_sauce |
       | standard_user | ads   |
       |  ad             | ads    |
-@login
+
   Cenario: Realizar Login
-    Quando informo username "standard_user"
-    E informo password "secret_sauce"
-    E clico no botao de login
+    Quando realizo login "standard_user","secret_sauce"
     Entao o sistema exibe usuario logado
 
 
@@ -31,12 +29,11 @@
       |      | secret_sauce |
       | standard_user |     |
       |               |     |
-
+    @login
   Cenario: Realizar Logout
-    Quando informo username "standard_user"
-    E informo password "secret_sauce"
-    E clico no botao de login
+    Quando realizo login "standard_user","secret_sauce"
     E o sistema exibe usuario logado
     E clico no menu
     E clico em logout
     Entao retorno para a pagina inicial
+
