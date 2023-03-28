@@ -23,4 +23,21 @@ public class ProdutosSteps {
     public void visualizoProdutos() {
         assertThat(Na(HomePage.class).contarProdutos(),is(6));}
 
+
+    @Quando("clico no funil")
+    public void clicoNoFunil() {
+        Na(HomePage.class).clicarFunil();
+    }
+
+
+    @Quando("clico na opcao name ZA")
+    public void clicoNaOpcaoNameZA() {
+        Na(HomePage.class).clicarNameZA();
+    }
+    @Entao("os produtos ficam ordenados de ZA")
+    public void osProdutosFicamOrdenadosDeZA() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
 }

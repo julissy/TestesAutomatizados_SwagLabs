@@ -21,8 +21,6 @@ public class LoginSteps {
     private String mensagemError = "Epic sadface: Username and password do not match any user in this service";
     private String mensagemCampoObrigatorio = "Epic sadface:";
 
-    private HomePage homePage = new HomePage();
-
 
     @Quando("informo username {string}")
     public void informoUsername(String string) {
