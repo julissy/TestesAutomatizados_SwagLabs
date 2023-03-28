@@ -25,12 +25,12 @@ que as dependências sejam baixadas no seu projeto
 
 ## Como usar
 
-```python
+
 Execução de Teste no diretório runners/RunnerTest.java 
 
 Para execução de cenarios especificos modifique a tags apontando 
 a tag utilizada nas features do diretório resources/features
-
+```python
 #@CucumberOptions(
         plugin = {"pretty", "html: target/cucumber-report.html"},
         features = "src/test/resources/features",
@@ -40,9 +40,9 @@ a tag utilizada nas features do diretório resources/features
         monochrome = true,
         dryRun = false
 )
-
+```
 Para execução normal de todos os cenários utilizar comentando o plugin tags
-
+```python
 #@CucumberOptions(
         plugin = {"pretty", "html: target/cucumber-report.html"},
         features = "src/test/resources/features",
@@ -52,13 +52,11 @@ Para execução normal de todos os cenários utilizar comentando o plugin tags
         monochrome = true,
         dryRun = false
 )
-
+```
 Para geração de relatório mantenha no plugin o "html: target/cucumber-report.html"
 
 Para execução dos testes clicar com botão esquerdo na seta verde que aparece ao lado 
 da classe RunnerTest
-
-```
 
 ![image](https://user-images.githubusercontent.com/102709022/228332191-6a204987-4cea-4478-8b8d-9569639c31d2.png)
 
