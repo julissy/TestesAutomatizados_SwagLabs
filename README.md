@@ -2,7 +2,7 @@
 
 Criação de cenários para testes de aceitação do sistema [Swag Labs](https://www.saucedemo.com/)
 
-## Installation
+## Instalação
 
 Java 19
  
