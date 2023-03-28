@@ -26,8 +26,7 @@ que as dependências sejam baixadas no seu projeto
 ## Como usar
 
 ```python
-Execução de Teste
-# no diretório runners/RunnerTest.java 
+Execução de Teste no diretório runners/RunnerTest.java 
 
 Para execução de cenarios especificos modifique a tags apontando 
 a tag utilizada nas features do diretório resources/features
@@ -36,7 +35,6 @@ a tag utilizada nas features do diretório resources/features
         plugin = {"pretty", "html: target/cucumber-report.html"},
         features = "src/test/resources/features",
         glue = "stepsDefinitions",
-//Para execução de cenários específicos 
         tags = "@login",
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         monochrome = true,
@@ -44,7 +42,7 @@ a tag utilizada nas features do diretório resources/features
 )
 
 Para execução normal de todos os cenários utilizar comentando o plugin tags
-...
+
 #@CucumberOptions(
         plugin = {"pretty", "html: target/cucumber-report.html"},
         features = "src/test/resources/features",
