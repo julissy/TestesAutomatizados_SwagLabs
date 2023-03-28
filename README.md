@@ -6,7 +6,9 @@ Criação de cenários para testes de aceitação do sistema [Swag Labs](https:/
 
 Java 19
  
-Maven
+Maven 3.6
+
+chrome Webdriver
 
 Por conveniência, faça o download do chromedriver adequado para o seu sistema operacional e adicione o caminho no diretório utils/Util. Local para download: https://chromedriver.chromium.org/downloads
 
@@ -14,11 +16,11 @@ Por conveniência, faça o download do chromedriver adequado para o seu sistema 
 
 
 
-```bash
+
 As dependências utilizadas já estão no pom.xml é preciso 
 apenas utilizar o comando do Maven -Refresh Project- para 
 que as dependências sejam baixadas no seu projeto
-```
+
 
 ![image](https://user-images.githubusercontent.com/102709022/228332037-e0f80f54-65a3-4833-82fe-b2f0a69325c6.png)
 
