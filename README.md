@@ -23,7 +23,7 @@ que as dependências sejam baixadas no seu projeto
 ![image](https://user-images.githubusercontent.com/102709022/228332037-e0f80f54-65a3-4833-82fe-b2f0a69325c6.png)
 
 
-## Usage
+## Como usar
 
 ```python
 Execução de Teste
