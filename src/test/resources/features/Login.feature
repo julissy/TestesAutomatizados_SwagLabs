@@ -1,6 +1,6 @@
   #language: pt
   #enconding: UTF-8
-
+@login
   Funcionalidade: Login
 
     Esquema do Cenario: Usuario inválido
@@ -30,7 +30,7 @@
         | standard_user |              |
         |               |              |
 
-    @login
+
     Cenario: Realizar Logout
       Quando realizo login "standard_user","secret_sauce"
       E o sistema exibe usuario logado

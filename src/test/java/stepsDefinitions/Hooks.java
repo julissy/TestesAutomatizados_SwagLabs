@@ -2,6 +2,7 @@ package stepsDefinitions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import pageObjects.LoginPage;
 import utils.Utils;
 
@@ -15,8 +16,14 @@ public class Hooks {
 
     }
 
-   // @After
-   // public void tearDown() {
-   //     Utils.finalizarAcesso();
-   // }
+   /* @After
+    public void printarTela() {
+
+    }*/
+
+    @After
+    public void tearDown(Scenario scenario) {
+        Utils.capturarTela(scenario);
+        Utils.finalizarAcesso();
+    }
 }

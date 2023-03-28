@@ -52,11 +52,11 @@ public class HomePage {
 
     public String ordenarZA() {
         ordemProdutos = driver.findElements(By.xpath("//div[@class='inventory_item_name']"));
-        //novaOrdemProdutos
+        List<String> novaOrdemProdutos = new ArrayList<>();
         //Arrays.sort(ordemProdutos, Collections.reverseOrder());
         for(WebElement element: ordemProdutos)
-            System.out.print(element.getText());
-        return ordemProdutos.toString();
+            novaOrdemProdutos.add(element.getText());
+        return novaOrdemProdutos.toString();
     }
 
 

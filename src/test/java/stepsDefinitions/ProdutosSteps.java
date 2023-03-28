@@ -36,8 +36,7 @@ public class ProdutosSteps {
     }
     @Entao("os produtos ficam ordenados de ZA")
     public void osProdutosFicamOrdenadosDeZA() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        Na(HomePage.class).ordenarZA();
     }
 
 }
