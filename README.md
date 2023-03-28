@@ -30,8 +30,8 @@ Execução de Teste no diretório runners/RunnerTest.java
 
 Para execução de cenarios especificos modifique a tags apontando 
 a tag utilizada nas features do diretório resources/features
-```python
-#@CucumberOptions(
+```java
+@CucumberOptions(
         plugin = {"pretty", "html: target/cucumber-report.html"},
         features = "src/test/resources/features",
         glue = "stepsDefinitions",
@@ -42,8 +42,8 @@ a tag utilizada nas features do diretório resources/features
 )
 ```
 Para execução normal de todos os cenários utilizar comentando o plugin tags
-```python
-#@CucumberOptions(
+```java
+@CucumberOptions(
         plugin = {"pretty", "html: target/cucumber-report.html"},
         features = "src/test/resources/features",
         glue = "stepsDefinitions",
