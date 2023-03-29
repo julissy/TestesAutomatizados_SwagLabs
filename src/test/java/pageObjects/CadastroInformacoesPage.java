@@ -43,8 +43,9 @@ public class CadastroInformacoesPage {
         campoLastName.sendKeys(lastName);
     }
 
-    public void preencherZipCode(Integer integer) {
-        campoZipCode.sendKeys(String.valueOf(integer));
+    public void preencherZipCode(String zipcode) {
+
+        campoZipCode.sendKeys(zipcode);
 
     }
 

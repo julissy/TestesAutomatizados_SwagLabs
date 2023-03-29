@@ -13,12 +13,12 @@
         | ad            | secret_sauce |
         | standard_user | ads          |
         | ad            | ads          |
-    @login
+
     Cenario: Realizar Login
       Quando realizo login "standard_user","secret_sauce"
       Entao o sistema exibe usuario logado
 
-
+    @login
     Esquema do Cenario: Campos obrigatorios
       Quando informo username "<name>"
       E informo password "<password>"

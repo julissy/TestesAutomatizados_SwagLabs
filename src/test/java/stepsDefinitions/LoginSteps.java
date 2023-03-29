@@ -71,12 +71,6 @@ public class LoginSteps {
     }
 
 
-    @Quando("informo password ")
-    public void informoPassword() {
-        Na(LoginPage.class).preencherPassword("");
-    }
-
-
     @Quando("realizo login {string},{string}")
     public void realizoLogin(String string, String string2) {
         Na(LoginPage.class).fazerLogin(string,string2);
