@@ -21,9 +21,9 @@ public class Hooks {
 
     }*/
 
-    @After
+   /* @After
     public void tearDown(Scenario scenario) {
         Utils.capturarTela(scenario);
         Utils.finalizarAcesso();
-    }
+    } */
 }

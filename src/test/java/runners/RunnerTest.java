@@ -6,10 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"pretty", "html: target/cucumber-report.html"},
+        plugin = {"pretty",
+                /*"html: target/cucumber-report"*/},
         features = "src/test/resources/features",
         glue = "stepsDefinitions",
-        tags = "@login",
+        tags = "@informacoes",
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         monochrome = true,
         dryRun = false

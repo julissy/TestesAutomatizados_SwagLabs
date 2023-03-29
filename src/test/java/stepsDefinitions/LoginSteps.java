@@ -49,6 +49,7 @@ public class LoginSteps {
     @Entao("o sistema exibe usuario logado")
     public void oSistemaExibeUsuarioLogado() {
         assertEquals("Swag Labs", driver.findElement(By.className("app_logo")).getText());
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
 
