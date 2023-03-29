@@ -5,11 +5,11 @@
    Contexto:
      Quando realizo login "standard_user","secret_sauce"
      E o sistema exibe usuario logado
-
+   @produtos
    Cenario: Visualizar todos produtos
      Quando vejo a tela principal
      Entao visualizo todos produtos
-@produtos
+
    Cenario: Ordenação da lista de produtos por nome
      Quando vejo a tela principal
      E clico no funil

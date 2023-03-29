@@ -3,25 +3,32 @@ package stepsDefinitions;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import pageObjects.CadastroInformacoesPage;
-
 import static org.junit.Assert.assertEquals;
 import static utils.Utils.Na;
 import static utils.Utils.driver;
 
 public class CadastroInformacoesSteps {
 
+
+
+
     private String campoObrigatorio = "Error:";
     private String telaOverview = "Checkout: Overview";
 
+    private WebElement botaoCarrinho = driver.findElement(By.className("shopping_cart_link"));
+
     @Quando("clico no botao carrinho")
-    public void clicoNoBotaoCarrinho() {
+    public void clicoNoBotaoCarrinho()  {
         Na(CadastroInformacoesPage.class).clicarBotaoCarrinho();
     }
     @Quando("clico no botao checkout")
     public void clicoNoBotaoCheckout() {
         Na(CadastroInformacoesPage.class).clicarBotaoCheckout();
     }
+
+
     @Quando("informo first name {string}")
     public void informoFirstName(String string) {
         Na(CadastroInformacoesPage.class).preencherFirstName(string);

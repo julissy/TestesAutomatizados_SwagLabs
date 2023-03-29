@@ -3,33 +3,36 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.Globals;
-
-import java.util.concurrent.TimeUnit;
 
 import static utils.Utils.driver;
 
 public class CadastroInformacoesPage {
 
-    private WebElement botaoCarrinho = driver.findElement(By.id("shopping_cart_container"));
+    @FindBy(className = "shopping_cart_link" )
+    private WebElement botaoCarrinho;
 
-    private WebElement botaoCheckout = driver.findElement(By.id("checkout"));
+    @FindBy(id = "checkout" )
+    private WebElement botaoCheckout;
 
-    private WebElement campoFirstName = driver.findElement(By.id("first-name"));
+    @FindBy(id = "first-name" )
+    private WebElement campoFirstName;
 
-    private WebElement campoLastName = driver.findElement(By.id("last-name"));
+    @FindBy(id = "last-name" )
+    private WebElement campoLastName;
 
-    private WebElement campoZipCode = driver.findElement(By.id("postal-code"));
+    @FindBy(id = "postal-code" )
+    private WebElement campoZipCode;
 
-    @FindBy(name = "continue")
+    @FindBy(name = "continue" )
     private WebElement botaoContinue;
 
-    public void clicarBotaoCarrinho() {
-        driver.get(Globals.SAUCE_DEMO_CART_PAGE_URL);
+
+    public void clicarBotaoCarrinho()  {
+        botaoCarrinho.click();
     }
 
     public void clicarBotaoCheckout() {
-        driver.get(Globals.SAUCE_DEMO_CHECKOUT_STEP_ONE_PAGE_URL);
+        botaoCheckout.click();
     }
 
     public void preencherFirstName(String firstName) {
@@ -37,11 +40,11 @@ public class CadastroInformacoesPage {
     }
 
     public void preencherLastName(String lastName) {
-        campoFirstName.sendKeys(lastName);
+        campoLastName.sendKeys(lastName);
     }
 
     public void preencherZipCode(Integer integer) {
-        campoFirstName.sendKeys(String.valueOf(integer));
+        campoZipCode.sendKeys(String.valueOf(integer));
 
     }
 

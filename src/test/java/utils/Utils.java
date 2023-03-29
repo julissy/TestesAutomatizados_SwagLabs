@@ -22,7 +22,7 @@ public class Utils {
          System.setProperty("webdriver.chrome.driver", "C:\\Webdrivers\\chromedrive\\111\\chromedriver.exe");
          driver = new ChromeDriver(options);
          driver.manage().window().maximize();
-         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+         //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
          driver.get("https://www.saucedemo.com/");
      }
