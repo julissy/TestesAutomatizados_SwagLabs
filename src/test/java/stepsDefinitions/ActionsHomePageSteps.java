@@ -4,7 +4,6 @@ import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import org.openqa.selenium.By;
 import pageObjects.ActionsHomePage;
-import pageObjects.HomePage;
 
 import static org.junit.Assert.assertEquals;
 import static utils.Utils.Na;

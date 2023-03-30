@@ -2,12 +2,9 @@ package stepsDefinitions;
 
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
-import org.junit.Assert;
 import org.openqa.selenium.By;
-import pageObjects.HomePage;
+import pageObjects.InventoryPage;
 import pageObjects.LoginPage;
-
-import utils.Utils;
 
 import java.util.concurrent.TimeUnit;
 
@@ -79,14 +76,14 @@ public class LoginSteps {
 
     @Quando("clico no menu")
     public void clicoNoMenu() {
-        Na(HomePage.class).clicarMenu();
+        Na(InventoryPage.class).clicarMenu();
 
     }
 
 
     @Quando("clico em logout")
     public void clicoEmLogout() {
-        Na(HomePage.class).clicarLogout();
+        Na(InventoryPage.class).clicarLogout();
     }
 
 
