@@ -8,26 +8,26 @@ import static utils.Utils.driver;
 
 public class CadastroInformacoesPage {
 
-    @FindBy(className = "shopping_cart_link" )
+    @FindBy(className = "shopping_cart_link")
     private WebElement botaoCarrinho;
 
-    @FindBy(id = "checkout" )
+    @FindBy(id = "checkout")
     private WebElement botaoCheckout;
 
-    @FindBy(id = "first-name" )
+    @FindBy(id = "first-name")
     private WebElement campoFirstName;
 
-    @FindBy(id = "last-name" )
+    @FindBy(id = "last-name")
     private WebElement campoLastName;
 
-    @FindBy(id = "postal-code" )
+    @FindBy(id = "postal-code")
     private WebElement campoZipCode;
 
-    @FindBy(name = "continue" )
+    @FindBy(name = "continue")
     private WebElement botaoContinue;
 
 
-    public void clicarBotaoCarrinho()  {
+    public void clicarBotaoCarrinho() {
         botaoCarrinho.click();
     }
 
@@ -44,9 +44,7 @@ public class CadastroInformacoesPage {
     }
 
     public void preencherZipCode(String zipcode) {
-
         campoZipCode.sendKeys(zipcode);
-
     }
 
     public void clicarBotaoContinue() {

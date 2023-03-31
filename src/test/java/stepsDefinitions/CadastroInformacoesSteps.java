@@ -23,6 +23,7 @@ public class CadastroInformacoesSteps {
         Na(CadastroInformacoesPage.class).clicarBotaoCarrinho();
     }
 
+
     @Quando("clico no botao checkout")
     public void clicoNoBotaoCheckout() {
         Na(CadastroInformacoesPage.class).clicarBotaoCheckout();
@@ -41,7 +42,7 @@ public class CadastroInformacoesSteps {
 
     @Quando("informo zip code {string}")
     public void informoZipCode(String string) {
-            Na(CadastroInformacoesPage.class).preencherZipCode(string);
+        Na(CadastroInformacoesPage.class).preencherZipCode(string);
 
     }
 

@@ -7,11 +7,11 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"pretty",
-                /*"html: target/cucumber-report"*/},
+                /*"html: target/cucumber-report.html"*/},
         features = "src/test/resources/features",
         glue = "stepsDefinitions",
-        tags = "@informacoes",
-        snippets = CucumberOptions.SnippetType.CAMELCASE,
+        snippets = CucumberOptions.SnippetType.CAMELCASE ,
+        tags = "@carrinho",
         monochrome = true,
         dryRun = false
 )

@@ -38,13 +38,13 @@ public class InventorySteps {
 
     @Entao("os produtos estao ordenados de AZ")
     public void osProdutosEstaoOrdenadosDeAZ() {
-        assertEquals(Na(InventoryPage.class).todosProdutos(), Na(InventoryPage.class).ordenarNomesComparacao());
+        assertEquals(Na(InventoryPage.class).listaProdutosInicial(), Na(InventoryPage.class).filtrarNomesProdutos());
     }
 
 
     @Entao("os produtos ficam ordenados de ZA")
     public void osProdutosFicamOrdenadosDeZA() {
-        assertEquals(Na(InventoryPage.class).todosProdutos(), Na(InventoryPage.class).ordenarNomesComparacao());
+        assertEquals(Na(InventoryPage.class).inverterNomesProdutosInicial(), Na(InventoryPage.class).filtrarNomesProdutos());
     }
 
     @Quando("clico na opcao price low-high")
@@ -55,7 +55,7 @@ public class InventorySteps {
 
     @Entao("os produtos ficam ordenados preco menor para maior")
     public void osProdutosFicamOrdenadosPrecoMenorParaMaior() {
-        assertEquals(Na(InventoryPage.class).todosOsPrecoProdutos(), Na(InventoryPage.class).precoComparacao());
+        assertEquals(Na(InventoryPage.class).inverterPrecoProdutosInicial(), Na(InventoryPage.class).filtrarPrecoProdutos());
     }
 
     @Quando("clico na opcao price high-low")
@@ -66,7 +66,7 @@ public class InventorySteps {
 
     @Entao("os produtos ficam ordenados preco maior para menor")
     public void osProdutosFicamOrdenadosPrecoMaiorParaMenor() {
-        assertEquals(Na(InventoryPage.class).todosOsPrecoProdutos(), Na(InventoryPage.class).precoComparacao());
+        assertEquals(Na(InventoryPage.class).listaPrecoProdutosInicial(), Na(InventoryPage.class).filtrarPrecoProdutos());
     }
 
 }
