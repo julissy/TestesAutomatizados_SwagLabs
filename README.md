@@ -1,6 +1,6 @@
 # Projeto de Automação Web - Java, Selenium e Cucumber
 
-Criação de cenários para testes de aceitação do sistema [Swag Labs](https://www.saucedemo.com/)
+Criação de casos de teste para testes de aceite do sistema [Swag Labs](https://www.saucedemo.com/)
 
 ## Instalação
 
