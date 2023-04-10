@@ -2,13 +2,15 @@
 
 Criação de casos de teste para testes de aceite do sistema [Swag Labs](https://www.saucedemo.com/)
 
+Caso tenha interesse em ver o Plano de Testes e a escrita de todos os Casos de Testes(manuais e automatizados), enviar email para jutocachelo@gmail.com
+
 ## Instalação
 
 Java 19
  
 Maven 3.6
 
-chrome Webdriver
+Chrome Webdriver
 
 Por conveniência, faça o download do chromedriver adequado para o seu sistema operacional e adicione o caminho no diretório utils/Util. Local para download: https://chromedriver.chromium.org/downloads
 
