@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "stepsDefinitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE ,
-        tags = "@carrinho",
+        tags = "@login",
         monochrome = true,
         dryRun = false
 )

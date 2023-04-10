@@ -4,6 +4,7 @@ import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import org.openqa.selenium.By;
 import pageObjects.InventoryPage;
+import pageObjects.ProductPage;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertEquals;
@@ -68,5 +69,21 @@ public class InventorySteps {
     public void osProdutosFicamOrdenadosPrecoMaiorParaMenor() {
         assertEquals(Na(InventoryPage.class).listaPrecoProdutosInicial(), Na(InventoryPage.class).filtrarPrecoProdutos());
     }
+
+    @Quando("vejo o produto {int}")
+    public void vejoOProduto(Integer int1) {
+        String produto = Na(InventoryPage.class).obterNomeProduto(int1);
+        System.out.println(produto);
+    }
+
+
+    @Quando("clico no produto {int}")
+    public void clicoNoProduto(Integer int1) {
+        Na(InventoryPage.class).clicarProduto(int1);
+    }
+    @Entao("os detalhes do produto {int} sao iguais")
+    public void osDetalhesDoProdutoSaoIguais(Integer int2) {
+        assertEquals(Na(InventoryPage.class).obterNomeProduto(int2) , Na(ProductPage.class).obterNomeProduto());
+      }
 
 }

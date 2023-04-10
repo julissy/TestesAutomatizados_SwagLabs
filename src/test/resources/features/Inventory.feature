@@ -29,9 +29,24 @@
      E clico no funil
      E clico na opcao price low-high
      Entao os produtos ficam ordenados preco menor para maior
-@produtos3
+
+   @produtos3
    Cenario: Ordenacao da lista de produtos por preco high-low
      Quando vejo a tela principal
      E clico no funil
      E clico na opcao price high-low
      Entao os produtos ficam ordenados preco maior para menor
+
+   @produtos4
+   Esquema do Cenario: Validar detalhes do produto igual no Inventory
+     Quando vejo o produto <indice>
+     E clico no produto <indice1>
+     Entao os detalhes do produto <indice2> sao iguais
+     Exemplos:
+       | indice | indice1 | indice2 |
+       | 0      | 0       | 0       |
+       | 1      | 1       | 1       |
+       | 2      | 2       | 2       |
+       | 3      | 3       | 3       |
+       | 4      | 4       | 4       |
+       | 5      | 5       | 5       |

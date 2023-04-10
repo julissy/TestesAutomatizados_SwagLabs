@@ -89,6 +89,19 @@ public class InventoryPage {
         return listaPreco.toString();
     }
 
+    public String obterNomeProduto(int indice) {
+        return listaProdutos.get(indice).getText();
+    }
+
+    public void clicarProduto(int indice) {
+        listaProdutos.get(indice).click();
+    }
+
+    public String obterPrecoProduto(int indice) {
+        return listaPreco.get(indice).getText();
+    }
+
+
 }
 
 
