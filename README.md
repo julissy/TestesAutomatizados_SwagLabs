@@ -2,7 +2,7 @@
 
 Criação de casos de teste para testes de aceite do sistema [Swag Labs](https://www.saucedemo.com/)
 
-Caso tenha interesse em ver o Plano de Testes e a escrita de todos os Casos de Testes(manuais e automatizados), enviar email para jutocachelo@gmail.com
+Caso tenha interesse em ver a escrita de todos os Casos de Testes(manuais e automatizados) é preciso baixar o arquivo [Casos de Testes](https://github.com/julissy/TestesAutomatizados_SwagLabs/blob/9f4128abc17f603bf711a2e700746c493f83b619/CTS_Swag_Labs.xlsx)
 
 ## Instalação
 
